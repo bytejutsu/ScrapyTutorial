@@ -37,6 +37,6 @@ class QuotetutorialPipeline(object):
         self.curr.execute("""insert into quotes_tb values (?,?,?)""", (
             item['title'][0],
             item['author'][0],
-            item['tags'][0]
+            item['tags'][0] if item['tags'] else None
         ))
         self.conn.commit()
