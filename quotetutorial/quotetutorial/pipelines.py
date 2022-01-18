@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 
 import sqlite3
 
+
 class QuotetutorialPipeline(object):
 
     def __init__(self):
@@ -26,7 +27,7 @@ class QuotetutorialPipeline(object):
                         title text,
                         author text,
                         tags text
-                    )""")
+                        )""")
 
     def process_item(self, item, spider):
         self.store_db(item)
